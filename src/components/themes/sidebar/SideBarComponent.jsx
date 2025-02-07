@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Drawer } from "@mui/material";
-import SideBarContent from "./SideBarContent";
 import UserApproval from "../../views/Dashboard/UserApproval";
+import SideBarContent from "./SidebarContent"
 import SurveyApproval from "../../views/Dashboard/SurveyApproval";
 import { useDrawer } from "../../../DrawerContext/DrawerContext";
 import RedemptionApproval from "../../views/Dashboard/RedemptionApproval";
