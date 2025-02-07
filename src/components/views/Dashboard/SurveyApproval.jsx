@@ -39,7 +39,7 @@ const SurveyApproval = () => {
   const fetchCompletedSurveys = async () => {
     try {
       const { data } = await axios.get(
-        "http://127.0.0.1:3000/supplier/getSupplier",
+        "https://xmc-backend-1.onrender.com/supplier/getSupplier",
         {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
@@ -63,7 +63,7 @@ const SurveyApproval = () => {
 
     try {
       const response = await axios.put(
-        "http://127.0.0.1:3000/api/update-survey-status",
+        "https://xmc-backend-1.onrender.com/api/update-survey-status",
         { approve: action === "approve", reject: action === "reject", message },
         { headers: { project_code, uuid } }
       );

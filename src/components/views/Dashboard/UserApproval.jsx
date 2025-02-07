@@ -45,7 +45,7 @@ const UserApproval = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:3000/getDasboardData");
+      const response = await axios.get("https://xmc-backend-1.onrender.com/getDasboardData");
       if (response.data && response.data.data) {
         setRows(response.data.data);
         let verification = response.data.data.map(
@@ -65,7 +65,7 @@ const UserApproval = () => {
   const handleVerification = async (email, action, message = "") => {
     try {
       const response = await axios.put(
-        "http://127.0.0.1:3000/api/userVerification",
+        "https://xmc-backend-1.onrender.com/api/userVerification",
         { approve: action === "approve", reject: action === "reject", message },
         { headers: { email: email } }
       );

@@ -47,7 +47,7 @@ const RedemptionApproval = () => {
   const handleApproval = async (requestId, action, message) => {
     try {
       const response = await axios.put(
-        "http://127.0.0.1:3000/api/update-redemption-status",
+        "https://xmc-backend-1.onrender.com/api/update-redemption-status",
         { approve: action === "approve", reject: action === "reject", message },
         {
           headers: {
@@ -101,7 +101,7 @@ const RedemptionApproval = () => {
   const getRedemptionDetails = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:3000/api/user/getRedemptionData",
+        "https://xmc-backend-1.onrender.com/api/user/getRedemptionData",
         {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
